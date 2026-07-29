@@ -20,17 +20,17 @@ A modern **Full Stack MERN E-Commerce Web Application** that allows users to bro
 
 > Add screenshots of your project here.
 
-### Home Page
+### 🏠 Home Page
 
-![Home Page](https://via.placeholder.com/1200x650?text=ShopNest+Home+Page)
+![Home Page](./Screenshots/Homepage.png)
 
-### Product Page
+### 🛍️ Products Page
 
-![Products](https://via.placeholder.com/1200x650?text=Products)
+![Products](./Screenshots/Products.png)
 
-### Cart
+### 🛒 Shopping Cart
 
-![Cart](https://via.placeholder.com/1200x650?text=Shopping+Cart)
+![Cart](./Screenshots/Cart.png)
 
 ---
 
