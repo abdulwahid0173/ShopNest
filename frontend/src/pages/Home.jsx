@@ -11,7 +11,7 @@ const Home = () => {
       try {
         console.log("Fetching products...");
 
-        const res = await fetch("http://localhost:5000/api/products");
+        const res = await fetch("/api/products");
         const data = await res.json();
 
         console.log(data);
