@@ -15,9 +15,6 @@ app.use(cors(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.send('ShopNest Backend is working properly!');
-});
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/products', require('./routes/productRoutes'));
@@ -27,15 +24,15 @@ app.use('/api/analytics', require('./routes/analyticsRoutes'));
 
 
 // Serve frontend in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
-  
-  app.use((req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build/index.html'));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
   });
 } else {
-  app.get('/', (req, res) => {
-    res.send('ShopNest API is running in Development mode...');
+  app.get("/", (req, res) => {
+    res.send("ShopNest API is running...");
   });
 }
 
